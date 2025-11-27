@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lecture 01 - Custom Ground</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <a-assets>
+      <!-- Ground texture + normal map -->
+      <img id="floor" src="assets/concrete_floor_damaged_01_4k/textures/concrete_floor_damaged_01_diff_4k.jpg">
+      <img id="floor-nrm" src="assets/concrete_floor_damaged_01_4k/textures/concrete_floor_damaged_01_nor_gl_4k.png">
+    </a-assets>
+
+    <!-- Custom floor -->
+    <a-plane
+      material="color: #FFFFFF; src: #floor; repeat: 5 5; normal-map: #floor-nrm; normal-texture-repeat: 5 5"
+      rotation="-90 0 0"
+      scale="10 10 1">
+    </a-plane>
+
+  </a-scene>
+</body>
+</html>
